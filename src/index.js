@@ -1,13 +1,10 @@
 const { ApolloServer,gql } = require('apollo-server');
-//const typeDefs = require('./schema');
 const {readFileSync} = require('fs');
 const path = require("path");
 const typeDefs = gql(readFileSync(path.resolve(__dirname, "./schema.graphql"), {encoding: 'utf-8'}));
 const {buildSubgraphSchema} = require('@apollo/subgraph');
 const resolvers = require('./resolvers');
 const TrackAPI = require('./datasources/track-api');
-
-//require('dotenv').config();
 
 async function startApolloServer(typeDefs, resolvers) {
   const server = new ApolloServer({

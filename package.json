@@ -8,7 +8,7 @@
     "dev": "nodemon src/index"
   },
   "dependencies": {
-    "@apollo/subgraph": "^2.0.5",
+    "@apollo/subgraph": "^2.2.1",
     "apollo-datasource-rest": "^0.11.0",
     "apollo-server": "^3.10.0",
     "graphql": "^16.5.0"
